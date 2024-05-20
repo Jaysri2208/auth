@@ -1,0 +1,24 @@
+whoami
+sudo chown -R $(whoami):staff ~/.pub-cache
+
+
+
+dart pub global deactivate flutterfire_cli
+dart pub global activate flutterfire_cli
+
+
+nano ~/.zshrc
+
+
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+
+source ~/.zshrc  # for zsh
+# or
+source ~/.bashrc  # for bash
+
+
+flutterfire --version
+
+
+flutterfire configure --project=foood-82d9b
